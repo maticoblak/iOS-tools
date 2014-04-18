@@ -8,7 +8,7 @@
 
 #import "ExtensionUiViewFrame.h"
 
-@implementation UIView(ExtensionUiViewFrame)
+@implementation UIView(ExtensionUIViewFrame)
 - (void)setLeft:(CGFloat)left {
     self.frame = CGRectMake(left, self.bottom, self.width, self.height);
 }

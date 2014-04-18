@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UIView(ExtensionUiViewFrame)
+@interface UIView(ExtensionUIViewFrame)
 @property CGFloat left;
 @property CGFloat right;
 @property CGFloat top;
