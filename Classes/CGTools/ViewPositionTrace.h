@@ -23,6 +23,8 @@
 @property NSInteger maximumBufferSize;
 @property (readonly) CGFloat traceLength;
 @property (readonly) CGPoint traceSpeed;
+@property (readonly) CGPoint swipeDirection;
+@property CGFloat swipeTrashold;
 - (void)begin:(CGPoint)point;
 - (void)push:(CGPoint)point;
 - (void)end:(CGPoint)point;

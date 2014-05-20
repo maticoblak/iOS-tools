@@ -34,6 +34,7 @@
 - (instancetype)init {
     if((self = [super init])) {
         self.maximumBufferSize = 5;
+        self.swipeTrashold = .4f;
     }
     return self;
 }
@@ -73,6 +74,33 @@
         returnSpeed = pointPlus(returnSpeed, speedFragment);
     }
     return returnSpeed;
+}
+- (CGPoint)swipeDirection {
+    CGPoint averageWay = CGPointZero;
+    NSInteger count = 0;
+    for(int i=0; i<_pointCount-1; i++) {
+        averageWay = pointPlus(averageWay, pointNormalize(pointMinus(self.buffer[i], self.buffer[i+1])));
+        count++;
+    }
+    if(count > 0) {
+        averageWay = pointNormalize(averageWay);
+        for(int i=0; i<_pointCount-1; i++) {
+            CGPoint currentWay = pointNormalize(pointMinus(self.buffer[i], self.buffer[i+1]));
+            if(fabsf(pointDot(currentWay, averageWay)-1.0f) > self.swipeTrashold) {
+                return CGPointZero;
+            }
+        }
+        return averageWay;
+    }
+    return CGPointZero;
+}
+- (NSString *)description {
+    NSString *toReturn = @"{\n";
+    for(int i=0; i<_pointCount; i++) {
+        toReturn = [toReturn stringByAppendingFormat:@"%@\n", NSStringFromCGPoint(self.buffer[i])];
+    }
+    toReturn = [toReturn stringByAppendingFormat:@"}"];
+    return toReturn;
 }
 ///////////////////////////////////////////////////
 ///       Buffers
