@@ -45,6 +45,7 @@ UITableViewDelegate
 - (void)insertHeader:(CollapsableTableViewHeader *)header atIndex:(NSInteger)index;
 - (void)removeHeaderAtIndex:(NSInteger)index;
 - (void)refreshItemAtIndex:(NSInteger)index;
+- (CollapsableTableViewHeader *)headerForIndex:(NSInteger)index;
 @end
 ////////////////////////////////////////////////////////
 ///           ---CollapsableTableViewHeader---

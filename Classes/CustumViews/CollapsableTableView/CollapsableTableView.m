@@ -113,6 +113,9 @@
     if(header.collapsed || header.boundView == nil) return;
     [_tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:index]] withRowAnimation:UITableViewRowAnimationMiddle];
 }
+- (CollapsableTableViewHeader *)headerForIndex:(NSInteger)index {
+    return (index<0||index>=self.headers.count)?nil:self.headers[index];
+}
 ///////////////////////////////////////////////////
 ///       Protocol
 #pragma mark Protocol
