@@ -1,11 +1,3 @@
-//
-//  ViewPositionTrace.h
-//  Toshl2.0
-//
-//  Created by Matic Oblak on 14/05/14.
-//  Copyright (c) 2014 Matic Oblak. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 ////////////////////////////////////////////////////////

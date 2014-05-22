@@ -1,11 +1,3 @@
-//
-//  CGPointTools.m
-//  Toshl2.0
-//
-//  Created by Matic Oblak on 9/27/13.
-//  Copyright (c) 2013 Matic Oblak. All rights reserved.
-//
-
 #import "CGPointTools.h"
 
 static CGFloat __pointRoundingScale = 2.0f;

@@ -1,11 +1,3 @@
-//
-//  ViewPositionTrace.m
-//  Toshl2.0
-//
-//  Created by Matic Oblak on 14/05/14.
-//  Copyright (c) 2014 Matic Oblak. All rights reserved.
-//
-
 #import "ViewPositionTrace.h"
 #import "CGPointTools.h"
 @interface ViewPositionTrace()

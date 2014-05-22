@@ -1,11 +1,3 @@
-//
-//  CGPointTools.h
-//  Toshl2.0
-//
-//  Created by Matic Oblak on 9/27/13.
-//  Copyright (c) 2013 Matic Oblak. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 CGFloat pointSquareDistance(CGPoint p1, CGPoint p2);
