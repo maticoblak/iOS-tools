@@ -2,13 +2,13 @@
 
 @implementation UIView(ExtensionUIViewFrame)
 - (void)setLeft:(CGFloat)left {
-    self.frame = CGRectMake(left, self.bottom, self.width, self.height);
+    self.frame = CGRectMake(left, self.top, self.width, self.height);
 }
 - (CGFloat)left {
     return self.frame.origin.x;
 }
 - (void)setRight:(CGFloat)right {
-    self.frame = CGRectMake(right-self.width, self.bottom, self.width, self.height);
+    self.frame = CGRectMake(right-self.width, self.top, self.width, self.height);
 }
 - (CGFloat)right {
     return self.width+self.left;
